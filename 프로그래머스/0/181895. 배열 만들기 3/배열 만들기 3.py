@@ -1,6 +1,4 @@
 def solution(arr, intervals):
-    answer = []
-    for i in intervals:
-        for k in range(i[0],i[1]+1):
-            answer.append(arr[k])
-    return answer
+    s1, e1 = intervals[0]
+    s2, e2 = intervals[1]
+    return arr[s1:e1+1] + arr[s2:e2+1]
