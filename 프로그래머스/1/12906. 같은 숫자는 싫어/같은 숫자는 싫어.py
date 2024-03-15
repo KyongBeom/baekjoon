@@ -1,14 +1,6 @@
-def solution(arr):
+def solution(s):
     answer = []
-    i = 0
-    while i < len(arr):
-        if len(answer) == 0:
-            answer.append(arr[i])
-            i += 1
-        elif answer[-1] == arr[i]:
-            i += 1
-        else:
-            answer.append(arr[i])
-            i+= 1
-        
+    for i in s:
+        if len(answer) == 0 or answer[-1] != i:
+            answer.append(i)
     return answer
